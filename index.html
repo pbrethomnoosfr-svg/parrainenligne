@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <title>ParrainEnLigne — Codes Parrains & Liens de Parrainage Vérifiés</title>
+    
+    <meta name="description" content="Trouvez les meilleurs codes parrains et liens de parrainage vérifiés. Obtenez des primes d'inscription et bonus exclusifs sur Fortuneo, Trade Republic, Winamax, etc.">
+    <meta name="keywords" content="parrainage, codes parrains, liens de parrainage, offre de parrainage, code parrainage, bonus parrainage, parrainage en ligne, bons plans parrainage">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="ParrainEnLigne">
+    <meta property="og:title" content="ParrainEnLigne — Codes Parrains & Liens de Parrainage Vérifiés">
+    <meta property="og:description" content="Profitez des meilleurs bonus d'inscription grâce à nos codes parrains et liens de parrainage vérifiés à 100 %.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ParrainEnLigne",
+      "description": "Plateforme de codes parrains, offres et liens de parrainage vérifiés.",
+      "inLanguage": "fr-FR"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .toast {
+            transform: translateY(100%);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 font-sans text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast fixed bottom-6 right-6 z-50 bg-emerald-500 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 font-semibold text-sm border border-emerald-400/30">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span id="toast-message">Code copié !</span>
+    </div>
+
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 px-4 py-2 rounded-2xl transition shadow-sm">
+                <img src="Pictures/MonLogo_parrainenligne.png" alt="ParrainEnLigne Logo" class="h-8 w-auto object-contain">
+                <span class="text-base font-bold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent hidden sm:inline">
+                    ParrainEnLigne
+                </span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <button onclick="filterCategory('all')" class="hover:text-indigo-400 transition">Toutes les Offres</button>
+                <button onclick="filterCategory('banque')" class="hover:text-indigo-400 transition">Banque & Bourse</button>
+                <button onclick="filterCategory('energie')" class="hover:text-indigo-400 transition">Énergie</button>
+                <button onclick="filterCategory('assurance')" class="hover:text-indigo-400 transition">Assurance</button>
+                <button onclick="filterCategory('jeux')" class="hover:text-indigo-400 transition">Paris & Poker</button>
+            </nav>
+
+            <a href="mailto:parrainenligne@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-indigo-600/20 flex items-center gap-2">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span class="hidden sm:inline">Contact</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-12 lg:py-16 border-b border-slate-800 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider mb-6">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                Offres & Codes Vérifiés
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                Boostez vos Inscriptions avec les <br class="hidden sm:inline">
+                <span class="bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
+                    Meilleurs Parrainages
+                </span>
+            </h1>
+            
+            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+                Récupérez des bonus immédiats en ouvrant vos comptes via nos liens et codes parrains mis à jour.
+            </p>
+
+            <!-- Barre de Recherche -->
+            <div class="max-w-lg mx-auto relative mb-8">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" id="searchInput" onkeyup="applyFilters()" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
+            </div>
+
+            <!-- Boutons Filtres par Catégorie -->
+            <div class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold">
+                <button onclick="filterCategory('all')" data-category="all" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl border border-indigo-500/40 transition">
+                    Toutes
+                </button>
+                <button onclick="filterCategory('banque')" data-category="banque" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                    Banque & Bourse
+                </button>
+                <button onclick="filterCategory('energie')" data-category="energie" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                    Énergie
+                </button>
+                <button onclick="filterCategory('assurance')" data-category="assurance" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                    Assurance
+                </button>
+                <button onclick="filterCategory('jeux')" data-category="jeux" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                    Paris & Poker
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cartes des Offres -->
+    <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="offersGrid">
+            
+            <!-- 1. Fortuneo -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/fortuneo.png" alt="Fortuneo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            210 € offerts
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Fortuneo Banque</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        160 € à l'inscription + 50 € de ma prime versée via Wero ou PayPal dès la réception de ma prime !
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-sm">12767393</code>
+                        <button onclick="copyCode('12767393', 'Fortuneo')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://mabanque.fortuneo.fr/fr/offres-parrainage/offres-parrainage.jsp?origine=PARRAINAGE&codeParrain=12767393" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Trade Republic -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/Trade_Republic.png" alt="Trade Republic" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            1 Action Offerte
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Trade Republic</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        1 action gratuite offerte (de 10 € à 200 €) pour tout dépôt de 50 € (récupérable, sans obligation d'investir).
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-sm">zzp82rdj</code>
+                        <button onclick="copyCode('zzp82rdj', 'Trade Republic')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://refnocode.trade.re/zzp82rdj" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Distingo Bank -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/Distingo_bank.png" alt="Distingo Bank" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            80 € offerts
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Distingo Bank</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Profitez de 80 € offerts à l'ouverture de votre livret Distingo. Taux excellents et livret sécurisé !
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-sm">UOSYF</code>
+                        <button onclick="copyCode('UOSYF', 'Distingo Bank')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://www.psabanque.fr/offres/parrainage" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Page Inscription <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Ohm Énergie -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="energie">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/Ohm_Energie.png" alt="Ohm Énergie" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            30 € offerts
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Ohm Énergie</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Obtenez 30 € offerts sous forme de bon d'achat Amazon ou directement crédités sur votre compte.
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-xs">philippeb-1228</code>
+                        <button onclick="copyCode('philippeb-1228', 'Ohm Énergie')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://souscription.ohm-energie.com/?utm_source=ecparrainagemail&parrainage=philippeb-1228" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Lien Souscription <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. Direct Assurance -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="assurance">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/Direct_Assurance.png" alt="Direct Assurance" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            100 € offerts
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Direct Assurance</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        100 € offerts ! Faites votre devis, renseignez le code promo DIRECTPARRAIN puis ajoutez le code parrain.
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code Parrain :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-xs">100138808415</code>
+                        <button onclick="copyCode('100138808415', 'Direct Assurance')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://www.direct-assurance.fr/" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Faire un Devis <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 6. Luko -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="assurance">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/Luko.png" alt="Luko" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            30 € offerts
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Luko</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        30 € offerts lors de votre souscription. Indiquez simplement l'adresse e-mail dans le champ code promo.
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">E-mail Parrain :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-xs">pbrethom@gmail.com</code>
+                        <button onclick="copyCode('pbrethom@gmail.com', 'Luko')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://www.luko.eu/" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Souscrire <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 7. Winamax -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/Winamax.png" alt="Winamax" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            +20 € Cash
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Winamax</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        20 € supplémentaires en plus de l'offre de bienvenue pour un 1er dépôt de 15 € minimum. N'oubliez pas le code !
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-sm">PHI07X</code>
+                        <button onclick="copyCode('PHI07X', 'Winamax')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://www.winamax.fr/parrain?code=PHI07X" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 8. Unibet -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/Unibet.png" alt="Unibet" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            30 € Freebets
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">Unibet</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        30 € offerts en Freebets + bonus jusqu'à 100 €. Effectuez un premier pari de 10 € min. et validez le compte.
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-xs">DF485ED1934703</code>
+                        <button onclick="copyCode('DF485ED1934703', 'Unibet')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://www.unibet.fr/inscription/?campaign=20726&parrain=DF485ED1934703" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 9. PMU -->
+            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
+                            <img src="Pictures/PMU.png" alt="PMU" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            +5 € Bonus
+                        </span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2">PMU</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        5 € de bonus supplémentaire (en plus de l'offre de 100 € en cours) lors de votre inscription.
+                    </p>
+                </div>
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Code :</span>
+                        <code class="font-mono text-indigo-300 font-bold text-sm">848435078</code>
+                        <button onclick="copyCode('848435078', 'PMU')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                            Copier
+                        </button>
+                    </div>
+                    <a href="https://www.pmu.fr/" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        S'inscrire <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 ParrainEnLigne — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Logic JS -->
+    <script>
+        let currentCategory = 'all';
+
+        function filterCategory(category) {
+            currentCategory = category;
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                    btn.classList.remove('bg-slate-800', 'text-slate-300');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-slate-800', 'text-slate-300');
+                }
+            });
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.offer-card');
+
+            cards.forEach(card => {
+                const matchesCategory = (currentCategory === 'all' || card.dataset.category === currentCategory);
+                const matchesSearch = card.textContent.toLowerCase().includes(query);
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function copyCode(code, name) {
+            navigator.clipboard.writeText(code).then(() => {
+                const toast = document.getElementById('toast');
+                const msg = document.getElementById('toast-message');
+                msg.textContent = `Code ${name} copié dans le presse-papier !`;
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            });
+        }
+    </script>
+</body>
+</html>
