@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
+    <!-- Sécurité CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;">
+    
+    <!-- URL Canonique SEO -->
+    <link rel="canonical" href="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
+        
     <title>ParrainEnLigne — Codes Parrains & Liens de Parrainage Vérifiés</title>
     
     <meta name="description" content="Trouvez les meilleurs codes parrains et liens de parrainage vérifiés. Obtenez des primes d'inscription et bonus exclusifs sur Fortuneo, Trade Republic, Winamax, etc.">
@@ -417,8 +424,22 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-slate-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4">
+    <footer class="border-t border-slate-800 bg-slate-950 py-10 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-6">
+            
+            <!-- Section QR Code -->
+            <div class="glass-card p-4 rounded-2xl flex flex-col items-center gap-3 border border-slate-800 shadow-xl max-w-xs">
+                <div class="bg-white p-2.5 rounded-xl shadow-inner">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://pbrethomnoosfr-svg.github.io/parrainenligne/#" alt="QR Code ParrainEnLigne" class="w-32 h-32">
+                </div>
+                <div class="text-center">
+                    <p class="text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-qrcode text-indigo-400"></i> Partager le site
+                    </p>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Scannez ce QR Code avec votre smartphone</p>
+                </div>
+            </div>
+
             <p>&copy; 2026 ParrainEnLigne — Tous droits réservés.</p>
         </div>
     </footer>
