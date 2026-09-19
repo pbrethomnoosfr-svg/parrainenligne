@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <!-- Sécurité CSP Renforcée (sans unsafe-eval) -->
+    <!-- Sécurité CSP Renforcée sans inline handlers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline'; img-src 'self' https: data:;">
     
     <!-- URL Canonique & Favicon -->
     <link rel="canonical" href="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
-    <link rel="icon" href="Pictures/MonLogo_parrainenligne.png" type="image/png">
+    <link rel="icon" href="Pictures/MonLogo_parrainenligne.webp" type="image/webp">
         
     <title>ParrainEnLigne — Codes Parrains & Liens de Parrainage Vérifiés</title>
     
@@ -24,13 +25,15 @@
     <meta property="og:description" content="Profitez des meilleurs bonus d'inscription grâce à nos codes parrains et liens de parrainage vérifiés à 100 %.">
     <meta property="og:url" content="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
     
-    <!-- Préconnexion aux origines distantes -->
+    <!-- Optimisation LCP : Preload de l'image au-dessus de la ligne de flottaison -->
+    <link rel="preload" as="image" href="Pictures/MonLogo_parrainenligne.webp" type="image/webp">
+
+    <!-- Préconnexions CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- Preload & Chargement Asynchrone des Polices et Icônes -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <!-- Chargement Asynchrone des Polices et Icônes sans blocage de rendu -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
 
@@ -48,7 +51,7 @@
     }
     </script>
 
-    <!-- Style CSS extrait et minifié pour des performances maximales -->
+    <!-- CSS critique inliné -->
     <style>
         *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e2e8f0; }
         html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
@@ -66,7 +69,7 @@
         .flex-col { flex-direction: column; } .flex-wrap { flex-wrap: wrap; } .flex-1 { flex: 1 1 0%; }
         .items-center { align-items: center; } .justify-between { justify-content: space-between; } .justify-center { justify-content: center; }
         .gap-1\.5 { gap: 0.375rem; } .gap-2 { gap: 0.5rem; } .gap-3 { gap: 0.75rem; } .gap-6 { gap: 1.5rem; }
-        .w-full { width: 100%; } .w-auto { width: auto; } .w-32 { width: 8rem; } .h-8 { height: 2rem; } .h-14 { height: 3.5rem; } .h-20 { height: 5rem; } .h-32 { height: 8rem; } .min-h-screen { min-height: 100vh; }
+        .w-full { width: 100%; } .w-auto { width: auto; } .w-32 { width: 8rem; } .h-8 { height: 2rem; } .h-14 { height: 3.5rem; } .h-32 { height: 8rem; } .min-h-screen { min-height: 100vh; }
         .max-w-xs { max-width: 20rem; } .max-w-lg { max-width: 32rem; } .max-w-2xl { max-width: 42rem; } .max-w-7xl { max-width: 80rem; } .mx-auto { margin-left: auto; margin-right: auto; }
         .p-2 { padding: 0.5rem; } .p-2\.5 { padding: 0.625rem; } .p-4 { padding: 1rem; } .p-6 { padding: 1.5rem; }
         .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; } .px-3\.5 { padding-left: 0.875rem; padding-right: 0.875rem; } .px-4 { padding-left: 1rem; padding-right: 1rem; } .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
@@ -100,7 +103,7 @@
         .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); } .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); } .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); } .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); } .shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.06); }
         .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .transition { transition-property: color, background-color, border-color, transform, opacity; transition-duration: 150ms; } .duration-300 { transition-duration: 300ms; }
-        .object-contain { object-fit: contain; } .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border-0; }
+        .object-contain { object-fit: contain; } .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
         .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
         .focus\:border-indigo-500:focus { border-color: #6366f1; }
         .focus\:ring-2:focus { box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3); }
@@ -135,18 +138,18 @@
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="https://pbrethomnoosfr-svg.github.io/parrainenligne/" aria-label="Page d'accueil ParrainEnLigne" class="flex items-center gap-3 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 px-4 py-2 rounded-2xl transition shadow-sm">
-                <img src="Pictures/MonLogo_parrainenligne.png" alt="ParrainEnLigne Logo" width="32" height="32" fetchpriority="high" decoding="async" class="h-8 w-auto object-contain">
+                <img src="Pictures/MonLogo_parrainenligne.webp" alt="ParrainEnLigne Logo" width="32" height="32" fetchpriority="high" decoding="async" class="h-8 w-auto object-contain">
                 <span class="text-base font-bold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent hidden sm:inline">
                     ParrainEnLigne
                 </span>
             </a>
 
             <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300" aria-label="Navigation principale">
-                <button type="button" onclick="filterCategory('all')" class="hover:text-indigo-400 transition">Toutes les Offres</button>
-                <button type="button" onclick="filterCategory('banque')" class="hover:text-indigo-400 transition">Banque & Bourse</button>
-                <button type="button" onclick="filterCategory('energie')" class="hover:text-indigo-400 transition">Énergie</button>
-                <button type="button" onclick="filterCategory('assurance')" class="hover:text-indigo-400 transition">Assurance</button>
-                <button type="button" onclick="filterCategory('jeux')" class="hover:text-indigo-400 transition">Paris & Poker</button>
+                <button type="button" data-nav-category="all" class="hover:text-indigo-400 transition">Toutes les Offres</button>
+                <button type="button" data-nav-category="banque" class="hover:text-indigo-400 transition">Banque & Bourse</button>
+                <button type="button" data-nav-category="energie" class="hover:text-indigo-400 transition">Énergie</button>
+                <button type="button" data-nav-category="assurance" class="hover:text-indigo-400 transition">Assurance</button>
+                <button type="button" data-nav-category="jeux" class="hover:text-indigo-400 transition">Paris & Poker</button>
             </nav>
 
             <a href="mailto:parrainenligne@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-indigo-600/20 flex items-center gap-2">
@@ -179,24 +182,24 @@
             <div class="max-w-lg mx-auto relative mb-8">
                 <label for="searchInput" class="sr-only">Rechercher une marque</label>
                 <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true"></i>
-                <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" aria-label="Rechercher une marque" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
+                <input type="text" id="searchInput" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" aria-label="Rechercher une marque" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
             </div>
 
             <!-- Filtres -->
-            <div class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold">
-                <button type="button" onclick="filterCategory('all')" data-category="all" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl border border-indigo-500/40 transition">
+            <div class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold" role="tablist" aria-label="Filtres par catégorie">
+                <button type="button" data-category="all" aria-pressed="true" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl border border-indigo-500/40 transition">
                     Toutes
                 </button>
-                <button type="button" onclick="filterCategory('banque')" data-category="banque" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                <button type="button" data-category="banque" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
                     Banque & Bourse
                 </button>
-                <button type="button" onclick="filterCategory('energie')" data-category="energie" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                <button type="button" data-category="energie" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
                     Énergie
                 </button>
-                <button type="button" onclick="filterCategory('assurance')" data-category="assurance" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                <button type="button" data-category="assurance" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
                     Assurance
                 </button>
-                <button type="button" onclick="filterCategory('jeux')" data-category="jeux" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                <button type="button" data-category="jeux" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
                     Paris & Poker
                 </button>
             </div>
@@ -212,7 +215,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/fortuneo.png" alt="Fortuneo" width="128" height="56" fetchpriority="high" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/fortuneo.webp" alt="Fortuneo" width="128" height="56" fetchpriority="high" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             210 € offerts
@@ -227,7 +230,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">12767393</code>
-                        <button type="button" onclick="copyCode('12767393', 'Fortuneo')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="12767393" data-copy-name="Fortuneo" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -242,7 +245,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Trade_Republic.png" alt="Trade Republic" width="128" height="56" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Trade_Republic.webp" alt="Trade Republic" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             1 Action Offerte
@@ -257,7 +260,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">zzp82rdj</code>
-                        <button type="button" onclick="copyCode('zzp82rdj', 'Trade Republic')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="zzp82rdj" data-copy-name="Trade Republic" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -272,7 +275,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Distingo_bank.png" alt="Distingo Bank" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Distingo_bank.webp" alt="Distingo Bank" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             80 € offerts
@@ -287,7 +290,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">UOSYF</code>
-                        <button type="button" onclick="copyCode('UOSYF', 'Distingo Bank')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="UOSYF" data-copy-name="Distingo Bank" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -302,7 +305,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Ohm_Energie.png" alt="Ohm Énergie" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Ohm_Energie.webp" alt="Ohm Énergie" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € offerts
@@ -317,7 +320,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">philippeb-1228</code>
-                        <button type="button" onclick="copyCode('philippeb-1228', 'Ohm Énergie')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="philippeb-1228" data-copy-name="Ohm Énergie" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -332,7 +335,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Direct_Assurance.png" alt="Direct Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Direct_Assurance.webp" alt="Direct Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             100 € offerts
@@ -347,7 +350,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code Parrain :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">100138808415</code>
-                        <button type="button" onclick="copyCode('100138808415', 'Direct Assurance')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="100138808415" data-copy-name="Direct Assurance" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -362,7 +365,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Luko.png" alt="Luko" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Luko.webp" alt="Luko" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € offerts
@@ -377,7 +380,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">E-mail Parrain :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">pbrethom@gmail.com</code>
-                        <button type="button" onclick="copyCode('pbrethom@gmail.com', 'Luko')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="pbrethom@gmail.com" data-copy-name="Luko" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -392,7 +395,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Winamax.png" alt="Winamax" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Winamax.webp" alt="Winamax" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             +20 € Cash
@@ -407,7 +410,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">PHI07X</code>
-                        <button type="button" onclick="copyCode('PHI07X', 'Winamax')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="PHI07X" data-copy-name="Winamax" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -422,7 +425,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Unibet.png" alt="Unibet" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Unibet.webp" alt="Unibet" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € Freebets
@@ -437,7 +440,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">DF485ED1934703</code>
-                        <button type="button" onclick="copyCode('DF485ED1934703', 'Unibet')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="DF485ED1934703" data-copy-name="Unibet" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -452,7 +455,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/PMU.png" alt="PMU" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/PMU.webp" alt="PMU" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             +5 € Bonus
@@ -467,7 +470,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">848435078</code>
-                        <button type="button" onclick="copyCode('848435078', 'PMU')" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="848435078" data-copy-name="PMU" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
                             Copier
                         </button>
                     </div>
@@ -480,7 +483,7 @@
         </div>
     </main>
 
-    <!-- Footer avec QR Code local -->
+    <!-- Footer -->
     <footer class="border-t border-slate-800 bg-slate-950 py-10 text-center text-slate-500 text-sm">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-6">
             
@@ -500,51 +503,69 @@
         </div>
     </footer>
 
-    <!-- JS pur pour les filtres et le presse-papier -->
+    <!-- JS non-bloquant et centralisé (Conforme CSP) -->
     <script>
-        let currentCategory = 'all';
-
-        function filterCategory(category) {
-            currentCategory = category;
-
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                if (btn.dataset.category === category) {
-                    btn.classList.add('bg-indigo-600', 'text-white');
-                    btn.classList.remove('bg-slate-800', 'text-slate-300');
-                } else {
-                    btn.classList.remove('bg-indigo-600', 'text-white');
-                    btn.classList.add('bg-slate-800', 'text-slate-300');
-                }
-            });
-
-            applyFilters();
-        }
-
-        function applyFilters() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentCategory = 'all';
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const navCategoryButtons = document.querySelectorAll('[data-nav-category]');
+            const searchInput = document.getElementById('searchInput');
             const cards = document.querySelectorAll('.offer-card');
+            const copyButtons = document.querySelectorAll('.copy-btn');
 
-            cards.forEach(card => {
-                const matchesCategory = (currentCategory === 'all' || card.dataset.category === currentCategory);
-                const matchesSearch = card.textContent.toLowerCase().includes(query);
+            function filterCategory(category) {
+                currentCategory = category;
 
-                if (matchesCategory && matchesSearch) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
+                filterButtons.forEach(btn => {
+                    const isSelected = btn.dataset.category === category;
+                    btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+                    if (isSelected) {
+                        btn.classList.add('bg-indigo-600', 'text-white');
+                        btn.classList.remove('bg-slate-800', 'text-slate-300');
+                    } else {
+                        btn.classList.remove('bg-indigo-600', 'text-white');
+                        btn.classList.add('bg-slate-800', 'text-slate-300');
+                    }
+                });
+
+                applyFilters();
+            }
+
+            function applyFilters() {
+                const query = searchInput.value.toLowerCase().trim();
+
+                cards.forEach(card => {
+                    const matchesCategory = (currentCategory === 'all' || card.dataset.category === currentCategory);
+                    const matchesSearch = card.textContent.toLowerCase().includes(query);
+
+                    card.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => filterCategory(btn.dataset.category));
             });
-        }
 
-        function copyCode(code, name) {
-            navigator.clipboard.writeText(code).then(() => {
-                const toast = document.getElementById('toast');
-                const msg = document.getElementById('toast-message');
-                msg.textContent = `Code ${name} copié dans le presse-papier !`;
-                toast.classList.add('show');
-                setTimeout(() => toast.classList.remove('show'), 3000);
+            navCategoryButtons.forEach(btn => {
+                btn.addEventListener('click', () => filterCategory(btn.dataset.navCategory));
             });
-        }
+
+            searchInput.addEventListener('input', applyFilters);
+
+            copyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const code = btn.dataset.copyCode;
+                    const name = btn.dataset.copyName;
+                    navigator.clipboard.writeText(code).then(() => {
+                        const toast = document.getElementById('toast');
+                        const msg = document.getElementById('toast-message');
+                        msg.textContent = `Code ${name} copié dans le presse-papier !`;
+                        toast.classList.add('show');
+                        setTimeout(() => toast.classList.remove('show'), 3000);
+                    });
+                });
+            });
+        });
     </script>
 </body>
 </html>
