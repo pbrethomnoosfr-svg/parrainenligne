@@ -18,12 +18,20 @@
     <meta name="description" content="Trouvez les meilleurs codes parrains et liens de parrainage vérifiés. Obtenez des primes d'inscription et bonus exclusifs sur Fortuneo, Trade Republic, Winamax, etc.">
     <meta name="keywords" content="parrainage, codes parrains, liens de parrainage, offre de parrainage, code parrainage, bonus parrainage, parrainage en ligne, bons plans parrainage">
     
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="ParrainEnLigne">
     <meta property="og:title" content="ParrainEnLigne — Codes Parrains &amp; Liens de Parrainage Vérifiés">
     <meta property="og:description" content="Profitez des meilleurs bonus d'inscription grâce à nos codes parrains et liens de parrainage vérifiés à 100 %.">
     <meta property="og:url" content="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
+    <meta property="og:image" content="https://pbrethomnoosfr-svg.github.io/parrainenligne/Pictures/MonLogo_parrainenligne.webp">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ParrainEnLigne — Codes Parrains &amp; Liens de Parrainage Vérifiés">
+    <meta name="twitter:description" content="Profitez des meilleurs bonus d'inscription grâce à nos codes parrains et liens de parrainage vérifiés à 100 %.">
+    <meta name="twitter:image" content="https://pbrethomnoosfr-svg.github.io/parrainenligne/Pictures/MonLogo_parrainenligne.webp">
     
     <!-- Preload LCP Logo -->
     <link rel="preload" as="image" href="Pictures/MonLogo_parrainenligne.webp" type="image/webp">
@@ -38,7 +46,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/aria/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Données Structurées JSON-LD -->
     <script type="application/ld+json">
@@ -148,7 +156,6 @@
                 </span>
             </a>
 
-            
             <a href="mailto:parrainenligne@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-indigo-600/20 flex items-center gap-2 touch-target">
                 <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
                 <span class="hidden sm:inline">Contact</span>
@@ -182,7 +189,7 @@
                 <input type="text" id="searchInput" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
             </div>
 
-            <!-- Filtres par catégorie (A11y: role="group") -->
+            <!-- Filtres par catégorie -->
             <div class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold" role="group" aria-label="Filtres par catégorie">
                 <button type="button" data-category="all" aria-pressed="true" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl border border-indigo-500/40 transition touch-target">
                     Toutes
@@ -508,7 +515,6 @@
             let toastTimer = null;
 
             const filterButtons = document.querySelectorAll('.filter-btn');
-            const navCategoryButtons = document.querySelectorAll('[data-nav-category]');
             const searchInput = document.getElementById('searchInput');
             const cards = document.querySelectorAll('.offer-card');
             const copyButtons = document.querySelectorAll('.copy-btn');
@@ -546,16 +552,6 @@
 
             filterButtons.forEach(btn => {
                 btn.addEventListener('click', () => filterCategory(btn.dataset.category));
-            });
-
-            navCategoryButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterCategory(btn.dataset.navCategory);
-                    const offersGrid = document.getElementById('offersGrid');
-                    if (offersGrid) {
-                        offersGrid.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
             });
 
             if (searchInput) {
