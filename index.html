@@ -6,14 +6,14 @@
     <meta name="theme-color" content="#0f172a">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <!-- Sécurité CSP Renforcée sans inline handlers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline'; img-src 'self' https: data:;">
+    <!-- Sécurité CSP structurée -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:;">
     
     <!-- URL Canonique & Favicon -->
     <link rel="canonical" href="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
     <link rel="icon" href="Pictures/MonLogo_parrainenligne.webp" type="image/webp">
         
-    <title>ParrainEnLigne — Codes Parrains & Liens de Parrainage Vérifiés</title>
+    <title>ParrainEnLigne — Codes Parrains &amp; Liens de Parrainage Vérifiés</title>
     
     <meta name="description" content="Trouvez les meilleurs codes parrains et liens de parrainage vérifiés. Obtenez des primes d'inscription et bonus exclusifs sur Fortuneo, Trade Republic, Winamax, etc.">
     <meta name="keywords" content="parrainage, codes parrains, liens de parrainage, offre de parrainage, code parrainage, bonus parrainage, parrainage en ligne, bons plans parrainage">
@@ -21,11 +21,11 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="ParrainEnLigne">
-    <meta property="og:title" content="ParrainEnLigne — Codes Parrains & Liens de Parrainage Vérifiés">
+    <meta property="og:title" content="ParrainEnLigne — Codes Parrains &amp; Liens de Parrainage Vérifiés">
     <meta property="og:description" content="Profitez des meilleurs bonus d'inscription grâce à nos codes parrains et liens de parrainage vérifiés à 100 %.">
     <meta property="og:url" content="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
     
-    <!-- Optimisation LCP : Preload de l'image au-dessus de la ligne de flottaison -->
+    <!-- Preload LCP Logo -->
     <link rel="preload" as="image" href="Pictures/MonLogo_parrainenligne.webp" type="image/webp">
 
     <!-- Préconnexions CDN -->
@@ -33,13 +33,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- Chargement Asynchrone des Polices et Icônes sans blocage de rendu -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+    <!-- Chargement Asynchrone des Polices et Icônes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/aria/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
+    <!-- Données Structurées JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,6 +62,9 @@
         .toast { transform: translateY(100%); opacity: 0; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
         .toast.show { transform: translateY(0); opacity: 1; }
         
+        /* Cibles tactiles optimisées mobile (A11y) */
+        .touch-target { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
         /* Utilitaires CSS */
         .fixed { position: fixed; } .sticky { position: sticky; } .relative { position: relative; } .absolute { position: absolute; }
         .top-0 { top: 0; } .bottom-6 { bottom: 1.5rem; } .right-6 { right: 1.5rem; } .left-4 { left: 1rem; } .top-1\/2 { top: 50%; } .-translate-y-1\/2 { transform: translateY(-50%); }
@@ -86,7 +90,7 @@
         .border-indigo-500\/20 { border-color: rgba(99, 102, 241, 0.2); } .border-indigo-500\/40 { border-color: rgba(99, 102, 241, 0.4); } .hover\:border-indigo-500\/50:hover { border-color: rgba(99, 102, 241, 0.5); }
         .border-emerald-500\/30 { border-color: rgba(16, 185, 129, 0.3); } .border-emerald-400\/30 { border-color: rgba(52, 211, 153, 0.3); }
         .rounded-lg { border-radius: 0.5rem; } .rounded-xl { border-radius: 0.75rem; } .rounded-2xl { border-radius: 1rem; } .rounded-full { border-radius: 9999px; }
-        .text-xs { font-size: 0.75rem; line-height: 1rem; } .text-\[11px\] { font-size: 11px; } .text-sm { font-size: 0.875rem; line-height: 1.25rem; } .text-base { font-size: 1rem; line-height: 1.5rem; } .text-lg { font-size: 1.125rem; line-height: 1.75rem; } .text-xl { font-size: 1.25rem; line-height: 1.75rem; } .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-xs { font-size: 0.75rem; line-height: 1rem; } .text-sm { font-size: 0.875rem; line-height: 1.25rem; } .text-base { font-size: 1rem; line-height: 1.5rem; } .text-lg { font-size: 1.125rem; line-height: 1.75rem; } .text-xl { font-size: 1.25rem; line-height: 1.75rem; } .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
         .font-semibold { font-weight: 600; } .font-bold { font-weight: 700; } .font-extrabold { font-weight: 800; } .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
         .uppercase { text-transform: uppercase; } .tracking-wider { letter-spacing: 0.05em; } .tracking-tight { letter-spacing: -0.025em; } .leading-tight { line-height: 1.25; } .text-center { text-align: center; }
         .text-white { color: #ffffff; } .text-slate-100 { color: #f1f5f9; } .text-slate-300 { color: #cbd5e1; } .text-slate-400 { color: #94a3b8; } .text-slate-500 { color: #64748b; } .text-indigo-200 { color: #c7d2fe; } .text-indigo-300 { color: #a5b4fc; } .text-indigo-400 { color: #818cf8; } .text-emerald-400 { color: #34d399; }
@@ -129,7 +133,7 @@
 <body class="bg-slate-900 font-sans text-slate-100 min-h-screen flex flex-col">
 
     <!-- Notification Toast -->
-    <div id="toast" class="toast fixed bottom-6 right-6 z-50 bg-emerald-500 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 font-semibold text-sm border border-emerald-400/30">
+    <div id="toast" class="toast fixed bottom-6 right-6 z-50 bg-emerald-500 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 font-semibold text-sm border border-emerald-400/30" role="status" aria-live="polite">
         <i class="fa-solid fa-circle-check text-lg" aria-hidden="true"></i>
         <span id="toast-message">Code copié !</span>
     </div>
@@ -137,22 +141,15 @@
     <!-- Header -->
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="https://pbrethomnoosfr-svg.github.io/parrainenligne/" aria-label="Page d'accueil ParrainEnLigne" class="flex items-center gap-3 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 px-4 py-2 rounded-2xl transition shadow-sm">
+            <a href="https://pbrethomnoosfr-svg.github.io/parrainenligne/" aria-label="Page d'accueil ParrainEnLigne" class="flex items-center gap-3 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 px-4 py-2 rounded-2xl transition shadow-sm touch-target">
                 <img src="Pictures/MonLogo_parrainenligne.webp" alt="ParrainEnLigne Logo" width="32" height="32" fetchpriority="high" decoding="async" class="h-8 w-auto object-contain">
                 <span class="text-base font-bold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent hidden sm:inline">
                     ParrainEnLigne
                 </span>
             </a>
 
-            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300" aria-label="Navigation principale">
-                <button type="button" data-nav-category="all" class="hover:text-indigo-400 transition">Toutes les Offres</button>
-                <button type="button" data-nav-category="banque" class="hover:text-indigo-400 transition">Banque & Bourse</button>
-                <button type="button" data-nav-category="energie" class="hover:text-indigo-400 transition">Énergie</button>
-                <button type="button" data-nav-category="assurance" class="hover:text-indigo-400 transition">Assurance</button>
-                <button type="button" data-nav-category="jeux" class="hover:text-indigo-400 transition">Paris & Poker</button>
-            </nav>
-
-            <a href="mailto:parrainenligne@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-indigo-600/20 flex items-center gap-2">
+            
+            <a href="mailto:parrainenligne@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-indigo-600/20 flex items-center gap-2 touch-target">
                 <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
                 <span class="hidden sm:inline">Contact</span>
             </a>
@@ -164,7 +161,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider mb-6">
                 <i class="fa-solid fa-shield-halved text-emerald-400" aria-hidden="true"></i>
-                Offres & Codes Vérifiés
+                Offres &amp; Codes Vérifiés
             </div>
             
             <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -174,7 +171,7 @@
                 </span>
             </h1>
             
-            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8">
                 Récupérez des bonus immédiats en ouvrant vos comptes via nos liens et codes parrains mis à jour.
             </p>
 
@@ -182,25 +179,25 @@
             <div class="max-w-lg mx-auto relative mb-8">
                 <label for="searchInput" class="sr-only">Rechercher une marque</label>
                 <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true"></i>
-                <input type="text" id="searchInput" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" aria-label="Rechercher une marque" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
+                <input type="text" id="searchInput" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
             </div>
 
-            <!-- Filtres -->
-            <div class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold" role="tablist" aria-label="Filtres par catégorie">
-                <button type="button" data-category="all" aria-pressed="true" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl border border-indigo-500/40 transition">
+            <!-- Filtres par catégorie (A11y: role="group") -->
+            <div class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold" role="group" aria-label="Filtres par catégorie">
+                <button type="button" data-category="all" aria-pressed="true" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl border border-indigo-500/40 transition touch-target">
                     Toutes
                 </button>
-                <button type="button" data-category="banque" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
-                    Banque & Bourse
+                <button type="button" data-category="banque" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
+                    Banque &amp; Bourse
                 </button>
-                <button type="button" data-category="energie" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                <button type="button" data-category="energie" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
                     Énergie
                 </button>
-                <button type="button" data-category="assurance" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                <button type="button" data-category="assurance" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
                     Assurance
                 </button>
-                <button type="button" data-category="jeux" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
-                    Paris & Poker
+                <button type="button" data-category="jeux" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
+                    Paris &amp; Poker
                 </button>
             </div>
         </div>
@@ -211,280 +208,280 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="offersGrid">
             
             <!-- Fortuneo -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/fortuneo.webp" alt="Fortuneo" width="128" height="56" fetchpriority="high" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/fortuneo.webp" alt="Logo Fortuneo Banque" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             210 € offerts
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Fortuneo Banque</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         160 € à l'inscription + 50 € de ma prime versée via Wero ou PayPal dès la réception de ma prime !
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code :</span>
+                        <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">12767393</code>
-                        <button type="button" data-copy-code="12767393" data-copy-name="Fortuneo" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="12767393" data-copy-name="Fortuneo" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://mabanque.fortuneo.fr/fr/offres-parrainage/offres-parrainage.jsp?origine=PARRAINAGE&codeParrain=12767393" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://mabanque.fortuneo.fr/fr/offres-parrainage/offres-parrainage.jsp?origine=PARRAINAGE&amp;codeParrain=12767393" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- Trade Republic -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Trade_Republic.webp" alt="Trade Republic" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Trade_Republic.webp" alt="Logo Trade Republic" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             1 Action Offerte
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Trade Republic</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         1 action gratuite offerte (de 10 € à 200 €) pour tout dépôt de 50 € (récupérable, sans obligation d'investir).
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code :</span>
+                        <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">zzp82rdj</code>
-                        <button type="button" data-copy-code="zzp82rdj" data-copy-name="Trade Republic" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="zzp82rdj" data-copy-name="Trade Republic" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://refnocode.trade.re/zzp82rdj" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://refnocode.trade.re/zzp82rdj" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- Distingo Bank -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="banque">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Distingo_bank.webp" alt="Distingo Bank" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Distingo_bank.webp" alt="Logo Distingo Bank" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             80 € offerts
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Distingo Bank</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         Profitez de 80 € offerts à l'ouverture de votre livret Distingo. Taux excellents et livret sécurisé !
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code :</span>
+                        <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">UOSYF</code>
-                        <button type="button" data-copy-code="UOSYF" data-copy-name="Distingo Bank" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="UOSYF" data-copy-name="Distingo Bank" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://www.psabanque.fr/offres/parrainage" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://www.psabanque.fr/offres/parrainage" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Page Inscription <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- Ohm Énergie -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="energie">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="energie">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Ohm_Energie.webp" alt="Ohm Énergie" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Ohm_Energie.webp" alt="Logo Ohm Énergie" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € offerts
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Ohm Énergie</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         Obtenez 30 € offerts sous forme de bon d'achat Amazon ou directement crédités sur votre compte.
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code :</span>
+                        <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">philippeb-1228</code>
-                        <button type="button" data-copy-code="philippeb-1228" data-copy-name="Ohm Énergie" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="philippeb-1228" data-copy-name="Ohm Énergie" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://souscription.ohm-energie.com/?utm_source=ecparrainagemail&parrainage=philippeb-1228" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://souscription.ohm-energie.com/?utm_source=ecparrainagemail&amp;parrainage=philippeb-1228" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Lien Souscription <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- Direct Assurance -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="assurance">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="assurance">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Direct_Assurance.webp" alt="Direct Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Direct_Assurance.webp" alt="Logo Direct Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             100 € offerts
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Direct Assurance</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         100 € offerts ! Faites votre devis, renseignez le code promo DIRECTPARRAIN puis ajoutez le code parrain.
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code Parrain :</span>
+                        <span class="text-xs text-slate-300">Code Parrain :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">100138808415</code>
-                        <button type="button" data-copy-code="100138808415" data-copy-name="Direct Assurance" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="100138808415" data-copy-name="Direct Assurance" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://www.direct-assurance.fr/" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://www.direct-assurance.fr/" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Faire un Devis <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- Luko -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="assurance">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="assurance">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Luko.webp" alt="Luko" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Luko.webp" alt="Logo Luko Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € offerts
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Luko</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         30 € offerts lors de votre souscription. Indiquez simplement l'adresse e-mail dans le champ code promo.
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">E-mail Parrain :</span>
+                        <span class="text-xs text-slate-300">E-mail Parrain :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">pbrethom@gmail.com</code>
-                        <button type="button" data-copy-code="pbrethom@gmail.com" data-copy-name="Luko" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="pbrethom@gmail.com" data-copy-name="Luko" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://www.luko.eu/" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://www.luko.eu/" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Souscrire <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- Winamax -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Winamax.webp" alt="Winamax" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Winamax.webp" alt="Logo Winamax" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             +20 € Cash
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Winamax</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         20 € supplémentaires en plus de l'offre de bienvenue pour un 1er dépôt de 15 € minimum. N'oubliez pas le code !
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code :</span>
+                        <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">PHI07X</code>
-                        <button type="button" data-copy-code="PHI07X" data-copy-name="Winamax" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="PHI07X" data-copy-name="Winamax" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://www.winamax.fr/parrain?code=PHI07X" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://www.winamax.fr/parrain?code=PHI07X" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- Unibet -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Unibet.webp" alt="Unibet" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/Unibet.webp" alt="Logo Unibet" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € Freebets
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">Unibet</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         30 € offerts en Freebets + bonus jusqu'à 100 €. Effectuez un premier pari de 10 € min. et validez le compte.
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code :</span>
+                        <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">DF485ED1934703</code>
-                        <button type="button" data-copy-code="DF485ED1934703" data-copy-name="Unibet" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="DF485ED1934703" data-copy-name="Unibet" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://www.unibet.fr/inscription/?campaign=20726&parrain=DF485ED1934703" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://www.unibet.fr/inscription/?campaign=20726&amp;parrain=DF485ED1934703" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         Lien Parrainage <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
             <!-- PMU -->
-            <div class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
+            <article class="offer-card glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300" data-category="jeux">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/PMU.webp" alt="PMU" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
+                            <img src="Pictures/PMU.webp" alt="Logo PMU" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             +5 € Bonus
                         </span>
                     </div>
                     <h2 class="text-xl font-bold text-white mb-2">PMU</h2>
-                    <p class="text-slate-400 text-sm mb-6">
+                    <p class="text-slate-300 text-sm mb-6">
                         5 € de bonus supplémentaire (en plus de l'offre de 100 € en cours) lors de votre inscription.
                     </p>
                 </div>
                 <div class="space-y-3 pt-4 border-t border-slate-800">
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Code :</span>
+                        <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">848435078</code>
-                        <button type="button" data-copy-code="848435078" data-copy-name="PMU" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition">
+                        <button type="button" data-copy-code="848435078" data-copy-name="PMU" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
-                    <a href="https://www.pmu.fr/" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                    <a href="https://www.pmu.fr/" target="_blank" rel="noopener noreferrer" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition touch-target">
                         S'inscrire <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
+            </article>
 
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-10 text-center text-slate-500 text-sm">
+    <footer class="border-t border-slate-800 bg-slate-950 py-10 text-center text-slate-400 text-sm">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-6">
             
             <div class="glass-card p-4 rounded-2xl flex flex-col items-center gap-3 border border-slate-800 shadow-xl max-w-xs">
@@ -492,10 +489,10 @@
                     <img src="Pictures/qrcode.svg" alt="QR Code ParrainEnLigne" width="128" height="128" loading="lazy" decoding="async" class="w-32 h-32 object-contain">
                 </div>
                 <div class="text-center">
-                    <p class="text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5">
+                    <p class="text-xs font-semibold text-slate-200 flex items-center justify-center gap-1.5">
                         <i class="fa-solid fa-qrcode text-indigo-400" aria-hidden="true"></i> Partager le site
                     </p>
-                    <p class="text-[11px] text-slate-400 mt-0.5">Scannez ce QR Code avec votre smartphone</p>
+                    <p class="text-xs text-slate-400 mt-0.5">Scannez ce QR Code avec votre smartphone</p>
                 </div>
             </div>
 
@@ -503,15 +500,31 @@
         </div>
     </footer>
 
-    <!-- JS non-bloquant et centralisé (Conforme CSP) -->
+    <!-- JavaScript Nettoyé & Optimisé -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let currentCategory = 'all';
+            let debounceTimer = null;
+            let toastTimer = null;
+
             const filterButtons = document.querySelectorAll('.filter-btn');
             const navCategoryButtons = document.querySelectorAll('[data-nav-category]');
             const searchInput = document.getElementById('searchInput');
             const cards = document.querySelectorAll('.offer-card');
             const copyButtons = document.querySelectorAll('.copy-btn');
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+
+            function applyFilters() {
+                const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+                cards.forEach(card => {
+                    const matchesCategory = (currentCategory === 'all' || card.dataset.category === currentCategory);
+                    const matchesSearch = !query || card.textContent.toLowerCase().includes(query);
+
+                    card.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
+                });
+            }
 
             function filterCategory(category) {
                 currentCategory = category;
@@ -531,37 +544,46 @@
                 applyFilters();
             }
 
-            function applyFilters() {
-                const query = searchInput.value.toLowerCase().trim();
-
-                cards.forEach(card => {
-                    const matchesCategory = (currentCategory === 'all' || card.dataset.category === currentCategory);
-                    const matchesSearch = card.textContent.toLowerCase().includes(query);
-
-                    card.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
-                });
-            }
-
             filterButtons.forEach(btn => {
                 btn.addEventListener('click', () => filterCategory(btn.dataset.category));
             });
 
             navCategoryButtons.forEach(btn => {
-                btn.addEventListener('click', () => filterCategory(btn.dataset.navCategory));
+                btn.addEventListener('click', () => {
+                    filterCategory(btn.dataset.navCategory);
+                    const offersGrid = document.getElementById('offersGrid');
+                    if (offersGrid) {
+                        offersGrid.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
             });
 
-            searchInput.addEventListener('input', applyFilters);
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    clearTimeout(debounceTimer);
+                    debounceTimer = setTimeout(applyFilters, 100);
+                });
+            }
 
             copyButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const code = btn.dataset.copyCode;
                     const name = btn.dataset.copyName;
+
+                    if (!code) return;
+
                     navigator.clipboard.writeText(code).then(() => {
-                        const toast = document.getElementById('toast');
-                        const msg = document.getElementById('toast-message');
-                        msg.textContent = `Code ${name} copié dans le presse-papier !`;
-                        toast.classList.add('show');
-                        setTimeout(() => toast.classList.remove('show'), 3000);
+                        if (toast && toastMessage) {
+                            toastMessage.textContent = `Code ${name || ''} copié dans le presse-papier !`;
+                            toast.classList.add('show');
+
+                            clearTimeout(toastTimer);
+                            toastTimer = setTimeout(() => {
+                                toast.classList.remove('show');
+                            }, 3000);
+                        }
+                    }).catch(err => {
+                        console.error('Erreur de copie :', err);
                     });
                 });
             });
