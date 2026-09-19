@@ -6,10 +6,10 @@
     <meta name="theme-color" content="#0f172a">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <!-- Security CSP Header -->
+    <!-- Sécurité CSP structurée -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:;">
     
-    <!-- Canonical URL & Favicon -->
+    <!-- URL Canonique & Favicon -->
     <link rel="canonical" href="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
     <link rel="icon" href="Pictures/MonLogo_parrainenligne.webp" type="image/webp">
         
@@ -25,19 +25,22 @@
     <meta property="og:description" content="Profitez des meilleurs bonus d'inscription grâce à nos codes parrains et liens de parrainage vérifiés à 100 %.">
     <meta property="og:url" content="https://pbrethomnoosfr-svg.github.io/parrainenligne/">
     
-    <!-- Preload LCP Asset -->
+    <!-- Preload LCP Logo -->
     <link rel="preload" as="image" href="Pictures/MonLogo_parrainenligne.webp" type="image/webp">
 
-    <!-- Preconnect CDNs -->
+    <!-- Préconnexions CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- Non-blocking Fonts & Icons Loading -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chargement Asynchrone des Polices et Icônes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"></noscript>
 
-    <!-- JSON-LD Structured Data -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/aria/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Données Structurées JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -49,7 +52,7 @@
     }
     </script>
 
-    <!-- Critical Inlined CSS -->
+    <!-- CSS critique inliné -->
     <style>
         *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e2e8f0; }
         html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
@@ -59,17 +62,17 @@
         .toast { transform: translateY(100%); opacity: 0; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
         .toast.show { transform: translateY(0); opacity: 1; }
         
-        /* Optimized Mobile Tap Targets (Min 48px for Lighthouse Mobile) */
-        .touch-target { min-height: 48px; min-width: 48px; display: inline-flex; align-items: center; justify-content: center; }
+        /* Cibles tactiles optimisées mobile (A11y) */
+        .touch-target { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
 
-        /* Utility CSS */
+        /* Utilitaires CSS */
         .fixed { position: fixed; } .sticky { position: sticky; } .relative { position: relative; } .absolute { position: absolute; }
         .top-0 { top: 0; } .bottom-6 { bottom: 1.5rem; } .right-6 { right: 1.5rem; } .left-4 { left: 1rem; } .top-1\/2 { top: 50%; } .-translate-y-1\/2 { transform: translateY(-50%); }
         .z-10 { z-index: 10; } .z-40 { z-index: 40; } .z-50 { z-index: 50; }
         .flex { display: flex; } .inline-flex { display: inline-flex; } .grid { display: grid; } .hidden { display: none; }
         .flex-col { flex-direction: column; } .flex-wrap { flex-wrap: wrap; } .flex-1 { flex: 1 1 0%; }
         .items-center { align-items: center; } .justify-between { justify-content: space-between; } .justify-center { justify-content: center; }
-        .gap-2 { gap: 0.5rem; } .gap-3 { gap: 0.75rem; } .gap-6 { gap: 1.5rem; }
+        .gap-1\.5 { gap: 0.375rem; } .gap-2 { gap: 0.5rem; } .gap-3 { gap: 0.75rem; } .gap-6 { gap: 1.5rem; }
         .w-full { width: 100%; } .w-auto { width: auto; } .w-32 { width: 8rem; } .h-8 { height: 2rem; } .h-14 { height: 3.5rem; } .h-32 { height: 8rem; } .min-h-screen { min-height: 100vh; }
         .max-w-xs { max-width: 20rem; } .max-w-lg { max-width: 32rem; } .max-w-2xl { max-width: 42rem; } .max-w-7xl { max-width: 80rem; } .mx-auto { margin-left: auto; margin-right: auto; }
         .p-2 { padding: 0.5rem; } .p-2\.5 { padding: 0.625rem; } .p-4 { padding: 1rem; } .p-6 { padding: 1.5rem; }
@@ -90,7 +93,7 @@
         .text-xs { font-size: 0.75rem; line-height: 1rem; } .text-sm { font-size: 0.875rem; line-height: 1.25rem; } .text-base { font-size: 1rem; line-height: 1.5rem; } .text-lg { font-size: 1.125rem; line-height: 1.75rem; } .text-xl { font-size: 1.25rem; line-height: 1.75rem; } .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
         .font-semibold { font-weight: 600; } .font-bold { font-weight: 700; } .font-extrabold { font-weight: 800; } .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
         .uppercase { text-transform: uppercase; } .tracking-wider { letter-spacing: 0.05em; } .tracking-tight { letter-spacing: -0.025em; } .leading-tight { line-height: 1.25; } .text-center { text-align: center; }
-        .text-white { color: #ffffff; } .text-slate-100 { color: #f1f5f9; } .text-slate-300 { color: #cbd5e1; } .text-indigo-200 { color: #c7d2fe; } .text-indigo-300 { color: #a5b4fc; } .text-indigo-400 { color: #818cf8; } .text-emerald-400 { color: #34d399; }
+        .text-white { color: #ffffff; } .text-slate-100 { color: #f1f5f9; } .text-slate-300 { color: #cbd5e1; } .text-slate-400 { color: #94a3b8; } .text-slate-500 { color: #64748b; } .text-indigo-200 { color: #c7d2fe; } .text-indigo-300 { color: #a5b4fc; } .text-indigo-400 { color: #818cf8; } .text-emerald-400 { color: #34d399; }
         .hover\:text-indigo-400:hover { color: #818cf8; }
         .bg-gradient-to-b { background-image: linear-gradient(to bottom, var(--tw-gradient-stops)); }
         .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
@@ -109,7 +112,6 @@
         .focus\:border-indigo-500:focus { border-color: #6366f1; }
         .focus\:ring-2:focus { box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3); }
 
-        /* Responsive breakpoints */
         @media (min-width: 640px) {
             .sm\:inline { display: inline; }
             .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -140,13 +142,14 @@
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="https://pbrethomnoosfr-svg.github.io/parrainenligne/" aria-label="Page d'accueil ParrainEnLigne" class="flex items-center gap-3 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 px-4 py-2 rounded-2xl transition shadow-sm touch-target">
-                <img src="Pictures/MonLogo_parrainenligne.webp" alt="ParrainEnLigne Logo" width="32" height="32" fetchpriority="high" decoding="async" class="h-8 w-auto object-contain" style="aspect-ratio: 1/1;">
+                <img src="Pictures/MonLogo_parrainenligne.webp" alt="ParrainEnLigne Logo" width="32" height="32" fetchpriority="high" decoding="async" class="h-8 w-auto object-contain">
                 <span class="text-base font-bold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent hidden sm:inline">
                     ParrainEnLigne
                 </span>
             </a>
 
-            <a href="mailto:parrainenligne@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-indigo-600/20 flex items-center gap-2 touch-target" aria-label="Contacter ParrainEnLigne par e-mail">
+            
+            <a href="mailto:parrainenligne@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-indigo-600/20 flex items-center gap-2 touch-target">
                 <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
                 <span class="hidden sm:inline">Contact</span>
             </a>
@@ -172,35 +175,35 @@
                 Récupérez des bonus immédiats en ouvrant vos comptes via nos liens et codes parrains mis à jour.
             </p>
 
-            <!-- Search Bar -->
+            <!-- Barre de Recherche -->
             <div class="max-w-lg mx-auto relative mb-8">
                 <label for="searchInput" class="sr-only">Rechercher une marque</label>
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" aria-hidden="true"></i>
-                <input type="text" id="searchInput" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-300 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true"></i>
+                <input type="text" id="searchInput" placeholder="Rechercher une marque (Fortuneo, Winamax, etc.)" class="w-full bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 rounded-2xl py-3.5 pl-11 pr-4 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition text-sm">
             </div>
 
-            <!-- Category Filters -->
-            <div class="flex flex-wrap justify-center gap-3 text-xs sm:text-sm font-semibold" role="group" aria-label="Filtres par catégorie">
-                <button type="button" data-category="all" aria-pressed="true" class="filter-btn active bg-indigo-600 text-white px-4 py-2.5 rounded-xl border border-indigo-500/40 transition touch-target">
+            <!-- Filtres par catégorie (A11y: role="group") -->
+            <div class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm font-semibold" role="group" aria-label="Filtres par catégorie">
+                <button type="button" data-category="all" aria-pressed="true" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl border border-indigo-500/40 transition touch-target">
                     Toutes
                 </button>
-                <button type="button" data-category="banque" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2.5 rounded-xl border border-slate-700 transition touch-target">
+                <button type="button" data-category="banque" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
                     Banque &amp; Bourse
                 </button>
-                <button type="button" data-category="energie" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2.5 rounded-xl border border-slate-700 transition touch-target">
+                <button type="button" data-category="energie" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
                     Énergie
                 </button>
-                <button type="button" data-category="assurance" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2.5 rounded-xl border border-slate-700 transition touch-target">
+                <button type="button" data-category="assurance" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
                     Assurance
                 </button>
-                <button type="button" data-category="jeux" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2.5 rounded-xl border border-slate-700 transition touch-target">
+                <button type="button" data-category="jeux" aria-pressed="false" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition touch-target">
                     Paris &amp; Poker
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Offers Section -->
+    <!-- Offres -->
     <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="offersGrid">
             
@@ -209,7 +212,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/fortuneo.webp" alt="Logo Fortuneo Banque" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/fortuneo.webp" alt="Logo Fortuneo Banque" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             210 € offerts
@@ -224,7 +227,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">12767393</code>
-                        <button type="button" data-copy-code="12767393" data-copy-name="Fortuneo" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="12767393" data-copy-name="Fortuneo" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -239,7 +242,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Trade_Republic.webp" alt="Logo Trade Republic" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/Trade_Republic.webp" alt="Logo Trade Republic" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             1 Action Offerte
@@ -254,7 +257,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">zzp82rdj</code>
-                        <button type="button" data-copy-code="zzp82rdj" data-copy-name="Trade Republic" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="zzp82rdj" data-copy-name="Trade Republic" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -269,7 +272,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Distingo_bank.webp" alt="Logo Distingo Bank" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/Distingo_bank.webp" alt="Logo Distingo Bank" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             80 € offerts
@@ -284,7 +287,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">UOSYF</code>
-                        <button type="button" data-copy-code="UOSYF" data-copy-name="Distingo Bank" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="UOSYF" data-copy-name="Distingo Bank" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -299,7 +302,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Ohm_Energie.webp" alt="Logo Ohm Énergie" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/Ohm_Energie.webp" alt="Logo Ohm Énergie" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € offerts
@@ -314,7 +317,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">philippeb-1228</code>
-                        <button type="button" data-copy-code="philippeb-1228" data-copy-name="Ohm Énergie" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="philippeb-1228" data-copy-name="Ohm Énergie" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -329,7 +332,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Direct_Assurance.webp" alt="Logo Direct Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/Direct_Assurance.webp" alt="Logo Direct Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             100 € offerts
@@ -344,7 +347,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code Parrain :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">100138808415</code>
-                        <button type="button" data-copy-code="100138808415" data-copy-name="Direct Assurance" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="100138808415" data-copy-name="Direct Assurance" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -359,7 +362,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Luko.webp" alt="Logo Luko Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/Luko.webp" alt="Logo Luko Assurance" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € offerts
@@ -374,7 +377,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">E-mail Parrain :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">pbrethom@gmail.com</code>
-                        <button type="button" data-copy-code="pbrethom@gmail.com" data-copy-name="Luko" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="pbrethom@gmail.com" data-copy-name="Luko" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -389,7 +392,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Winamax.webp" alt="Logo Winamax" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/Winamax.webp" alt="Logo Winamax" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             +20 € Cash
@@ -404,7 +407,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">PHI07X</code>
-                        <button type="button" data-copy-code="PHI07X" data-copy-name="Winamax" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="PHI07X" data-copy-name="Winamax" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -419,7 +422,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/Unibet.webp" alt="Logo Unibet" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/Unibet.webp" alt="Logo Unibet" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             30 € Freebets
@@ -434,7 +437,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-xs">DF485ED1934703</code>
-                        <button type="button" data-copy-code="DF485ED1934703" data-copy-name="Unibet" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="DF485ED1934703" data-copy-name="Unibet" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -449,7 +452,7 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-white p-2 rounded-xl w-32 h-14 flex items-center justify-center shadow-sm">
-                            <img src="Pictures/PMU.webp" alt="Logo PMU" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain" style="aspect-ratio: 16/7;">
+                            <img src="Pictures/PMU.webp" alt="Logo PMU" width="128" height="56" loading="lazy" decoding="async" class="max-h-full max-w-full object-contain">
                         </div>
                         <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
                             +5 € Bonus
@@ -464,7 +467,7 @@
                     <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5 flex items-center justify-between">
                         <span class="text-xs text-slate-300">Code :</span>
                         <code class="font-mono text-indigo-300 font-bold text-sm">848435078</code>
-                        <button type="button" data-copy-code="848435078" data-copy-name="PMU" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-2 rounded-lg border border-indigo-500/40 transition touch-target">
+                        <button type="button" data-copy-code="848435078" data-copy-name="PMU" class="copy-btn bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-500/40 transition touch-target">
                             Copier
                         </button>
                     </div>
@@ -478,18 +481,18 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-10 text-center text-slate-300 text-sm">
+    <footer class="border-t border-slate-800 bg-slate-950 py-10 text-center text-slate-400 text-sm">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-6">
             
             <div class="glass-card p-4 rounded-2xl flex flex-col items-center gap-3 border border-slate-800 shadow-xl max-w-xs">
                 <div class="bg-white p-2.5 rounded-xl shadow-inner flex items-center justify-center">
-                    <img src="Pictures/qrcode.svg" alt="QR Code ParrainEnLigne" width="128" height="128" loading="lazy" decoding="async" class="w-32 h-32 object-contain" style="aspect-ratio: 1/1;">
+                    <img src="Pictures/qrcode.svg" alt="QR Code ParrainEnLigne" width="128" height="128" loading="lazy" decoding="async" class="w-32 h-32 object-contain">
                 </div>
                 <div class="text-center">
-                    <p class="text-xs font-semibold text-slate-100 flex items-center justify-center gap-1.5">
+                    <p class="text-xs font-semibold text-slate-200 flex items-center justify-center gap-1.5">
                         <i class="fa-solid fa-qrcode text-indigo-400" aria-hidden="true"></i> Partager le site
                     </p>
-                    <p class="text-xs text-slate-300 mt-0.5">Scannez ce QR Code avec votre smartphone</p>
+                    <p class="text-xs text-slate-400 mt-0.5">Scannez ce QR Code avec votre smartphone</p>
                 </div>
             </div>
 
@@ -497,7 +500,7 @@
         </div>
     </footer>
 
-    <!-- Optimized Client-Side Logic -->
+    <!-- JavaScript Nettoyé & Optimisé -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let currentCategory = 'all';
@@ -505,6 +508,7 @@
             let toastTimer = null;
 
             const filterButtons = document.querySelectorAll('.filter-btn');
+            const navCategoryButtons = document.querySelectorAll('[data-nav-category]');
             const searchInput = document.getElementById('searchInput');
             const cards = document.querySelectorAll('.offer-card');
             const copyButtons = document.querySelectorAll('.copy-btn');
@@ -542,6 +546,16 @@
 
             filterButtons.forEach(btn => {
                 btn.addEventListener('click', () => filterCategory(btn.dataset.category));
+            });
+
+            navCategoryButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterCategory(btn.dataset.navCategory);
+                    const offersGrid = document.getElementById('offersGrid');
+                    if (offersGrid) {
+                        offersGrid.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
             });
 
             if (searchInput) {
